@@ -1,0 +1,70 @@
+.contenedor{
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:100px 80px 500px 200px; 
+    grid-template-areas:"h h h h"
+                        "izq t t der"
+                        "izq c c der"
+                        "f f f f"; 
+                        background-image: url("../imagenes/Portada/fondo.jpg");
+}
+.cabecera{
+grid-area: h;
+background-image: url("../imagenes/Portada/footer1.png");
+}
+.contenido-sesion{
+  
+    margin-top: 20px;
+    
+    grid-area: c;
+ 
+
+
+
+}
+.titulo-sesion hr{
+border-bottom: 4px solid white;
+}
+.titulo-sesion{
+    grid-area: t;
+    
+    color: white;
+    text-align: center;
+    
+    font-family: 'Amatic SC', cursive;
+}
+.footer{
+  
+    grid-area: f;
+}
+#Cabecera{
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+.inicioSesion{
+    text-align: right;
+   width: 80%;
+}
+.fondoizq{
+    grid-area: izq;
+  
+}
+.fondoder{
+    grid-area: der;
+   
+}
+.summit input{
+  margin-top: 20px;
+    width: 200px;
+
+}
+.password input,.usuario input{
+    width: 350px;
+}
+.password label,.usuario label{
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+}
