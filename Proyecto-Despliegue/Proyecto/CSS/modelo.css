@@ -1,0 +1,42 @@
+
+#container{
+    background-image: url("../imagenes/Portada/fondo4.jpg");
+}
+.titulo-contenedor-modelos{
+    padding-top: 100px;
+    margin-left: 20px;
+  text-align: center;
+    margin-right: 20px;
+    font-family: 'Amatic SC', cursive; font-size: 40px;
+}
+.contenedor-modelos{
+   padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 20px;
+  
+margin-right: 20px;
+
+padding-bottom: 20px;
+}
+.celda-modelo{
+    height: 250px;;
+ border: 2px solid black;
+ text-align: center;
+
+ display: flex;
+ flex-direction: column;
+
+}
+.titulo-celda-modelo{
+border-bottom: 2px solid black;
+font-family: 'Jua', sans-serif;
+font-size: 20px;
+   
+background-color: orange;
+}
+.img-celda-modelo{
+    margin-top: 40px;
+
+
+}
