@@ -8,7 +8,7 @@ hr{
     margin-right: 20px;
 }
 
-.contenedor {
+.contenedor-datosper {
     
     display: grid;
     grid-template-columns: 1fr;
@@ -22,7 +22,7 @@ hr{
     justify-content: center;
     margin-bottom: 20px ;
 }
-.Contenido{
+.Contenido-datosper{
     width: 30%;
    
     background-color: darkgray;
@@ -34,10 +34,10 @@ hr{
 
    
 }
-.Datos{
+.Datos-personales{
    
 }
-.Filas{
+.Filas-datos-personales{
    
  border-bottom: 2px solid black;
    justify-content: space-around;

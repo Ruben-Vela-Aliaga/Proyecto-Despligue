@@ -28,6 +28,9 @@ padding-bottom: 20px;
  flex-direction: column;
 
 }
+.img-celda-modelo:hover{
+    cursor: pointer;
+}
 .titulo-celda-modelo{
 border-bottom: 2px solid black;
 font-family: 'Jua', sans-serif;

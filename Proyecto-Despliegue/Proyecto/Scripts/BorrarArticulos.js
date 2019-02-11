@@ -4,7 +4,7 @@ function Ajax(id_articulo){
    // formData.append("username", id_articulo);
     peticion_http = new XMLHttpRequest();
     peticion_http.onreadystatechange = mostrar;
-    peticion_http.open('GET', 'http://192.168.4.37/Proyecto/borrarArticulo.php?id_Articulo='+id_articulo, true);
+    peticion_http.open('GET', 'http://192.168.4.37/Proyecto/modelo/borrarArticulo.php?id_Articulo='+id_articulo, true);
     peticion_http.send(null);
 function mostrar() {
     if(peticion_http.readyState == 4 && peticion_http.status == 200) {
@@ -34,7 +34,7 @@ function Comprar(){
    // formData.append("username", id_articulo);
    peticion_http = new XMLHttpRequest();
    peticion_http.onreadystatechange = mostrar;
-   peticion_http.open('GET', 'http://192.168.4.37/Proyecto/articulosComprados.php', true);
+   peticion_http.open('GET', 'http://192.168.4.37/Proyecto/modelo/articulosComprados.php', true);
    peticion_http.send(null);
 function mostrar() {
    if(peticion_http.readyState == 4 && peticion_http.status == 200) {

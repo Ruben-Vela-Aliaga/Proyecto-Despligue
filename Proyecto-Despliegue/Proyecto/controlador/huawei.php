@@ -1,3 +1,4 @@
+<script src="../Scripts/modelosHuawei.js"></script>
 <?php
 
  include '../vista/header.php';

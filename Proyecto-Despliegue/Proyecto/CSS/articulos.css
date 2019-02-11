@@ -1,4 +1,4 @@
-.contenedor{
+.contenedor-fundas{
 margin-top: 40px;
 display: grid;
 margin-left: 20px;
@@ -17,8 +17,8 @@ body{
     background-repeat: repeat-x;
     background-color:#ede5b4; 
 }
- h1{ 
-   margin-top: 40px;
+.titulo-fundas-cabecera{ 
+   padding-top: 90px;
     text-align: center;
 }
 hr{

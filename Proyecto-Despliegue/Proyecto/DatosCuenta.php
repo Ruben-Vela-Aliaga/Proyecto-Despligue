@@ -2,7 +2,7 @@
 include 'header.php';
 
 ?>  
-<link href="CSS/DatosPersonales.css" rel="stylesheet">
+
 <div class="contenedor">
 <div class="tit"><h1>Datos Personales</h1>
 <hr></div>

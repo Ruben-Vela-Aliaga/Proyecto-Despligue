@@ -1,19 +1,8 @@
 <?php
 
-include '../infoBd.php';
+include 'conexionBd.php';
 $id_Marca=$_GET["id_Marca"];
 
-# Crear conexión. Opcionalmente se puede poner como quinto parámetro
-# el puerto
-$conn = mysqli_connect($servidor, $username, $password, $basedatos);
-
-
-
-
-# Comprobar conexión
-if (!$conn) {
-    die("Conexi&ocacuten fallida: " . mysqli_connect_error());
-}
 
 
 

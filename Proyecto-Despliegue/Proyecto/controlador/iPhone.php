@@ -1,3 +1,4 @@
+<script src="../Scripts/modelosiPhone.js"></script>
 <?php
 
  include '../vista/header.php';

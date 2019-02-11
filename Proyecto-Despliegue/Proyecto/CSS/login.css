@@ -1,12 +1,11 @@
-.contenedor{
+.contenedor-login{
     display: grid;
 
     grid-template-columns: repeat(4,1fr);
     grid-template-rows:100px 80px 500px 200px; 
     grid-template-areas:"h h h h"
                         "izq t t der"
-                        "izq c c der"
-                        "f f f f"; 
+                        "izq c c der";
                         background-image: url("../imagenes/Portada/fondo.jpg");
 }
 .cabecera{

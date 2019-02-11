@@ -30,8 +30,14 @@ $telefono=$_SESSION["telefono"];
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+  <script src="../Scripts/articulos.js"></script>
   <link href="../CSS/indice.css" rel="stylesheet">
   <link href="../CSS/modelo.css" rel="stylesheet">
+  <link href="../CSS/registro.css" rel="stylesheet">
+  <link href="../CSS/login.css" rel="stylesheet">
+  <link href="../CSS/articulos.css" rel="stylesheet">  
+  <link href="../CSS/MiCarro.css" rel="stylesheet">
+  <link href="../CSS/DatosPersonales.css" rel="stylesheet">
 </head>
 <body>
   <div id="container">
@@ -76,8 +82,8 @@ $telefono=$_SESSION["telefono"];
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Productos</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="../controlador/samsung.php?id_Marca=1">Samsung</a>
-                    <a class="dropdown-item" href="../controladoriPhone.php?id_Marca=2">iPhone</a>
-                    <a class="dropdown-item" href="../controladorHuawei.php?id_Marca=3">Huawei</a>
+                    <a class="dropdown-item" href="../controlador/iPhone.php?id_Marca=2">iPhone</a>
+                    <a class="dropdown-item" href="../controlador/huawei.php?id_Marca=3">Huawei</a>
                     <a class="dropdown-item" href="#">LG</a>
                     <a class="dropdown-item" href="#">Sony</a>
                     <a class="dropdown-item" href="#">BQ</a>
@@ -116,9 +122,9 @@ $telefono=$_SESSION["telefono"];
              echo " <u>$email</u>";
            echo "</button>";
             echo "<div class='dropdown-menu dropdown-menu-lg-right'>";
-            echo "<a class='dropdown-item' href='../controlador/DatosCuenta.php'>Mi Cuenta</a>";
+            echo "<a class='dropdown-item' href='../controlador/datosPersonales.php'>Mi Cuenta</a>";
             echo "<a class='dropdown-item'href='../controlador/MiCarrito.php'>Mi Carrito</a>";
-            echo "<a class='dropdown-item' href='../controlador/cerrarSesion.php'>Cerrar Sesión</a>";
+            echo "<a class='dropdown-item' href='../modelo/cerrarSesion.php'>Cerrar Sesión</a>";
            echo "</div>";
            echo "</div>";
           }else{

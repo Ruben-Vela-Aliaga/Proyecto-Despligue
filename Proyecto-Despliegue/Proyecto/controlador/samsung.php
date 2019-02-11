@@ -1,3 +1,5 @@
+<script src="../Scripts/modelosSamsung.js"></script>
+
 <?php
 
  include '../vista/header.php';
