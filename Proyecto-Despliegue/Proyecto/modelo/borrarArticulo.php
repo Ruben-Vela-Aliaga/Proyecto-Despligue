@@ -2,9 +2,10 @@
 <?php
 include 'conexionBd.php';
 
-$id_Articulo=$_GET["id_Articulo"];
+$id_Articulo=$_POST["articulo"];
+$id_Pedido=$_POST["Pedido"];
 
-$consulta="DELETE FROM Pedido_Contiene WHERE id_Articulo = '".$id_Articulo."'";
+$consulta="DELETE FROM Pedido_Contiene WHERE id_Articulo = '".$id_Articulo."' AND id_Pedido='".$id_Pedido."'";
 
 
 

@@ -1,11 +1,12 @@
-function Ajax(id_articulo){
+function Ajax(id_articulo,id_Pedido){
 
-    //var formData = new FormData();
-   // formData.append("username", id_articulo);
+    var formData = new FormData();
+   formData.append("articulo", id_articulo);
+   formData.append("Pedido", id_Pedido);
     peticion_http = new XMLHttpRequest();
     peticion_http.onreadystatechange = mostrar;
-    peticion_http.open('GET', 'http://192.168.4.37/Proyecto/modelo/borrarArticulo.php?id_Articulo='+id_articulo, true);
-    peticion_http.send(null);
+    peticion_http.open('POST', 'http://192.168.4.37/Proyecto/modelo/borrarArticulo.php',true);
+    peticion_http.send(formData);
 function mostrar() {
     if(peticion_http.readyState == 4 && peticion_http.status == 200) {
 
@@ -15,9 +16,10 @@ function mostrar() {
     }
 }
 
-function borrarDatos(id_articulo){
+function borrarDatos(id_articulo,id_Pedido){
 var id_articulo =id_articulo;
-Ajax(id_articulo);
+var id_Pedido = id_Pedido;
+Ajax(id_articulo,id_Pedido);
 
 }
 document.addEventListener("DOMContentLoaded",cargar);
@@ -66,7 +68,7 @@ function cancelarCompra(){
 function Pagar(){
     peticion_http = new XMLHttpRequest();
     peticion_http.onreadystatechange = mostrar;
-    peticion_http.open('GET', 'http://192.168.4.37/Proyecto/articulosPagados.php', true);
+    peticion_http.open('GET', 'http://192.168.4.37/Proyecto/modelo/articulosPagados.php', true);
     peticion_http.send(null);
 
 function mostrar() {
@@ -74,6 +76,7 @@ function mostrar() {
        var text = peticion_http.responseText;
       
        location.reload();
+      
    }
    }
 

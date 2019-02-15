@@ -1,14 +1,8 @@
 
 <?php
 session_start();
-include 'infoBd.php';
+include 'conexionBd.php';
 $id_Usuario=$_SESSION["id_usuario"];
-$conn = mysqli_connect($servidor, $username, $password, $basedatos);
-
- # Comprobar conexión
- if (!$conn) {
-     die("Conexi&ocacuten fallida: " . mysqli_connect_error());
- }
 $consulta="SELECT id_Pedido FROM Pedidos WHERE id_Cliente='$id_Usuario' AND Estado='Abierto'";
  $result=mysqli_query($conn, $consulta);
      #El Cliente Tiene un pedido abierto;
@@ -66,7 +60,7 @@ $consulta="SELECT id_Pedido FROM Pedidos WHERE id_Cliente='$id_Usuario' AND Esta
 }            
 echo "</div>";
 echo "<div  id='precioTotal'class='precioTotal'><div class='letraPrecio'><span>PRECIO TOTAL :</span></div><div class='numPrecio'><span>$total €</span></div><div><a id='Pagar'>Confirmar</a></div></div>";
-echo "<div  id='cruz'class='cruz'><img src='imagenes/cerrar.png'></div>";
+echo "<div  id='cruz'class='cruz'><img src='../imagenes/cerrar.png'></div>";
 
 
 

@@ -6,6 +6,7 @@ session_start();
 if(isset($_SESSION["usuario"])){
   $email=$_SESSION["usuario"];
 $nombre=$_SESSION["nombre"];
+$nomUsuario=$_SESSION["NombreUsuario"];
 $apellido=$_SESSION["apellidos"];
 $fecha=$_SESSION["fecha"];
 $originalDate = $fecha;
@@ -38,6 +39,7 @@ $telefono=$_SESSION["telefono"];
   <link href="../CSS/articulos.css" rel="stylesheet">  
   <link href="../CSS/MiCarro.css" rel="stylesheet">
   <link href="../CSS/DatosPersonales.css" rel="stylesheet">
+  <link href="../CSS/pedidos.css" rel="stylesheet">
 </head>
 <body>
   <div id="container">
@@ -90,22 +92,8 @@ $telefono=$_SESSION["telefono"];
 
                   </div>
                 </li>
-                <li class="nav-item2 dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Vídeos</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="../controladorVideoSamsung.php">Samsung</a>
-                    <a class="dropdown-item" href="../controladorVideoiPhone.php">iPhone</a>
-                    <a class="dropdown-item" href="../controladorVideoHuawei1.php">Huawei</a>
-                    <a class="dropdown-item" href="#">LG</a>
-                    <a class="dropdown-item" href="#">Sony</a>
-                    <a class="dropdown-item" href="#">BQ</a>
-
-                  </div>
-
-                </li>
-                <nav class="nav nav-masthead justify-content-center">
-                  <a class="nav-link" href="../controlador/Contacto.php">Contacto</a>
-                </nav>
+                
+               
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -123,6 +111,7 @@ $telefono=$_SESSION["telefono"];
            echo "</button>";
             echo "<div class='dropdown-menu dropdown-menu-lg-right'>";
             echo "<a class='dropdown-item' href='../controlador/datosPersonales.php'>Mi Cuenta</a>";
+            echo "<a class='dropdown-item' href='../controlador/pedidos.php'>Pedidos</a>";
             echo "<a class='dropdown-item'href='../controlador/MiCarrito.php'>Mi Carrito</a>";
             echo "<a class='dropdown-item' href='../modelo/cerrarSesion.php'>Cerrar Sesión</a>";
            echo "</div>";

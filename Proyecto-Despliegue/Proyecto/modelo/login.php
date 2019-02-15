@@ -32,6 +32,7 @@ if(mysqli_num_rows($result)==1){
     $_SESSION["usuario"]=$nombre["email"];
     $_SESSION["id_usuario"]=$nombre["id_Cliente"];
     $_SESSION["nombre"]=$nombre["nombre"];
+    $_SESSION["NombreUsuario"]=$nombre["usuario"];
     $_SESSION["apellidos"]=$nombre["apellidos"];
     $_SESSION["fecha"]=$nombre["fecha_nacimiento"];
     $_SESSION["telefono"]=$nombre["telefono"];

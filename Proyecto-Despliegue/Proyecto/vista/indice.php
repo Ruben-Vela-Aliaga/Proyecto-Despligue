@@ -7,7 +7,7 @@
           Todas las marcas y modelos: Samsung, iPhone, Huawei, LG, Sony, HTC, etc.
             Protege tu móvil ante posibles golpes con una funda original, podrás elegir entre una gran selección de fundas, desde las clásicas a las más innovadoras.
             ¡Pon tu móvil a la última con FundaMovil!</p>
-          <a class="nav-link" href="../controlador/Contacto.php"><button type="button" class="btn btn-primary btn-lg">Escribenos</button></a>
+          <a class="nav-link" href=""><button type="button" class="btn btn-primary btn-lg">Escribenos</button></a>
         </div>
 
         </div>

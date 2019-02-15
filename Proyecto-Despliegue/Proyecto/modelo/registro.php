@@ -8,12 +8,13 @@ include 'conexionBd.php';
             $apellidos=$_POST["apellidos"];
             $direccion=$_POST["direccion"];
             $telefono=$_POST["telefono"];
+            $nomUsuario=$_POST["usuario"];
             $fecha_nacimiento=$_POST["fecha_nacimiento"];
             $password1=$_POST["contra"];
             $encriptar=md5($password1);
             $email=$_POST["email"];
-            $consulta = "INSERT INTO Clientes (nombre, apellidos, direccion, fecha_nacimiento, telefono, email, contrasenya)
-            VALUES ('$nombre','$apellidos','$direccion','$fecha_nacimiento','$telefono','$email','$encriptar')";
+            $consulta = "INSERT INTO Clientes (nombre, apellidos, direccion, fecha_nacimiento, telefono, email, contrasenya,usuario)
+            VALUES ('$nombre','$apellidos','$direccion','$fecha_nacimiento','$telefono','$email','$encriptar','$nomUsuario')";
           
             # A continuación se ejecuta la consulta y se devuelve el resultado
             # en el caso de que se trate de un SELECT. En otro caso devuelve
@@ -22,7 +23,7 @@ include 'conexionBd.php';
            
             if (mysqli_query($conn, $consulta)) {
                 echo"Registro completado, ahora inicia sesion";
-                header("Location:../controlador/indice.php");
+                header("Location:../controlador/Indice.php");
           } else {
                 echo "Error: " . $consulta . "<br>" . mysqli_error($conn);
           }

@@ -38,19 +38,11 @@ $fechaActual=date('Y-m-d');
 
 
 # Añadimos el articulo al pedido 
+
 $consulta= "INSERT INTO Pedido_Contiene (id_Articulo,id_Pedido,cantidad) VALUES ('$id_Articulo','$id_Pedido',1)";
 
 
- # Buscar las cosas que pertenecen a ese pedido y ponerlas en el carrito
 
- 
-
-
- # HAbemus carrito
-
- # Cerrar la conexión es una buena práctica, para liberar recursos
- # inmediatamente, pero si no se pone, no pasa nada porque PHP
- # cierra la conexión automáticamente al salir:
 
  if (mysqli_query($conn, $consulta)) {
    

@@ -13,7 +13,7 @@ grid-area: h;
 background-image: url("../imagenes/Portada/footer1.png");
 }
 .contenido-registro{
-  
+  position: relative;
     margin-top: 20px;
     
     grid-area: c;
@@ -60,11 +60,18 @@ width: 90%;
     width: 100px;
 
 }
-.password input,.nombre input, .apellidos input,.direccion input,.usuario input,.telefono input,.password2 input,.fecha input{ 
+.password input,.nombre input, .apellidos input,.direccion input,.usuario input,.telefono input,.password2 input,.fecha input,.nomUsuario input{ 
     width: 350px;
 }
-.password label,.nombre label, .apellidos label,.direccion label,.usuario label,.telefono label,.password2 label,.fecha label{
+.password label,.nombre label, .apellidos label,.direccion label,.usuario label,.telefono label,.password2 label,.fecha label,.nomUsuario label{
     margin-top: 20px;
     font-size: 30px;
     color: white;
+}
+.errores{
+    position: absolute;
+    right: 10%;
+    color: darkred;
+    color:greenyellow
+
 }

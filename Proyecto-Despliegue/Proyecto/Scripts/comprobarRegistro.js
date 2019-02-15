@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded",cargar);
+
+
+
+function cargar(){
+    document.getElementById("email").addEventListener("blur",Correo);
+    document.getElementById("password").addEventListener("blur",validarPassw);
+}
+
+
+
+
+
+
 function passwd(pass1){
     var p1= document.getElementById("password").value;
     var p2= document.getElementById("password2").value;
@@ -14,22 +28,27 @@ alert("Las contraseñas no son iguales");
 
 }
 
-function passwd1(pass){
- pass = pass.value;
-
-let requisitos=/^([A-Z]|[a-z])+\w{8,14}$/;
+function validarPassw(){
+ pass = this.value;
+alert(pass);
+let requisitos=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
 if(requisitos.test(pass)){
-  alert("Contraseña Correcta");
+    this.style.borderColor="greenyellow";
 }else{
-  alert("Requiere al menos 1 letra y 8 caracteres minimo");
+    document.getElementById("errorPassw").innerHTML="!Password incorrecta¡";
+    this.style.borderColor="red";
 }
 
 }
-function Correo(Email){
-    Email = Email.value;
-    re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
-if(!re.exec(Email)){
-alert('email no valido');
-}
-else alert('email valido');
+function Correo(){
+    var texto = this.value;
+    alert(texto);
+    var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  
+    if (!regex.test(texto)) {
+        document.getElementById("errorEmail").innerHTML="!Correo incorrecto¡";
+        this.style.borderColor="red";
+    } else {
+        this.style.borderColor="greenyellow";
+    }
 }

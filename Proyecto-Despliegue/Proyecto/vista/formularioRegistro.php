@@ -15,7 +15,7 @@
         <div class="usuario">
           <label>Email:</label>
           <input id="email" type="text" placeholder="correo electrónico.." name="email">
-
+<div id="errorEmail" class="errores"></div>
         </div>
         <div class="nombre">
           <label>Nombre:</label>
@@ -25,6 +25,11 @@
         <div class="apellidos">
           <label>Apellidos:</label>
           <input id="apellidos" type="text" placeholder="Apellidos" name="apellidos">
+
+        </div>
+        <div class="nomUsuario">
+          <label>Usuario:</label>
+          <input id="usuario" type="text" placeholder="jose21.." name="usuario">
 
         </div>
         <div class="fecha">
@@ -47,6 +52,7 @@
           <label>Contraseña:</label>
           <input id="password" type="password" placeholder="contraseña.." name="contra">
         </div>
+        <div id=" " class="errores"></div>
         <div class="registrar">
           <input id="registrar" type="submit" value="Registrar">
         </div>

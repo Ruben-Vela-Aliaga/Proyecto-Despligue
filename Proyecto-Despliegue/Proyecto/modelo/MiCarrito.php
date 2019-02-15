@@ -52,7 +52,7 @@ echo "<div class='contenidoPrincipal'>";
            echo "<div class='dato-descripcion'>".$fila2['descripcion']."</div>"; 
            echo "</div>";
            echo "<div class='item-Borrar'>";
-           echo "<div><img src=../imagenes/error.png onclick='borrarDatos(".$fila['id_Articulo'].")'></div>";
+           echo "<div><img src=../imagenes/eliminar.png onclick='borrarDatos(".$fila['id_Articulo'].",$id_Pedido)'></div>";
            echo "</div>";
            
        }
@@ -66,7 +66,7 @@ echo "<div class='contenidoPrincipal'>";
       if($numeroArticulos<=0){
 
 
-        echo "<span class='pordefecto'>Actualmente el carrito esta vacio</span>";
+        echo "<span id='carritoVacio'class='pordefecto'>Actualmente el carrito esta vacio</span>";
       }else {
         echo "<div class='btn-comprar'><img id='comprarArti'  src='../imagenes/btn-comprar.png'></div>";
       }
