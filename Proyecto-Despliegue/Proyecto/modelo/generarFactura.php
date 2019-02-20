@@ -18,7 +18,7 @@ while($facturas=mysqli_fetch_array($result)){
     echo "<div class='contenedor-facturas-individuales'>";
     $originalDate = $facturas['fecha_Creacion'];
 $newDate = date("d/m/Y", strtotime($originalDate));
-    echo "<div class='factura-idPedido'><a href='../modelo/detallesPedido.php?id_Pedido=".$facturas['id_Pedido']."'>".$facturas['id_Pedido']."</a></div>";
+    echo "<div class='factura-idPedido'><a href='../controlador/detallesPedido.php?id_Pedido=".$facturas['id_Pedido']."'>".$facturas['id_Pedido']."</a></div>";
     echo "<div class='factura-fechaCreacion'>$newDate</div>";   
      echo "<div class='factura-Estado'>".$facturas['Estado']."</div>";
      echo "</div>";

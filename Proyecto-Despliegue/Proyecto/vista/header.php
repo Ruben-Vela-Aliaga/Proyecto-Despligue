@@ -23,6 +23,8 @@ $telefono=$_SESSION["telefono"];
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="shortcut icon" href="../imagenes/icono.png"/>
   <link href="non-responsive.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+
 
  <script src="js/ie-emulation-modes-warning.js"></script>
    <title>FundaMovil</title>
@@ -40,6 +42,7 @@ $telefono=$_SESSION["telefono"];
   <link href="../CSS/MiCarro.css" rel="stylesheet">
   <link href="../CSS/DatosPersonales.css" rel="stylesheet">
   <link href="../CSS/pedidos.css" rel="stylesheet">
+  <link href="../CSS/detallesPedido.css" rel="stylesheet">
 </head>
 <body>
   <div id="container">

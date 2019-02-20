@@ -19,6 +19,7 @@ function Editar(){
         input.style.backgroundColor="white";
     }
 usuario=input.value;
+alert(usuario);
    var formData = new FormData();
    formData.append("usuario", usuario);
    
@@ -28,7 +29,7 @@ usuario=input.value;
     peticion_http.send(formData);
 function mostrar() {
     if(peticion_http.readyState == 4 && peticion_http.status == 200) {
-       //alert(peticion_http.responseText);
+       alert(peticion_http.responseText);
         
   
     }
