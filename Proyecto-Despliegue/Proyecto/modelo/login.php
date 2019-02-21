@@ -39,7 +39,7 @@ if(mysqli_num_rows($result)==1){
     
     header("Location:../controlador/Indice.php");
 }else{
-    header("Location:../vista/formularioLogin.php");
+    header("Location:../controlador/formLogin.php");
 }
  
 

@@ -29,10 +29,10 @@ include 'conexionBd.php';
            
            
             if (mysqli_query($conn, $consulta)) {
-                echo"Registro completado, ahora inicia sesion";
+               
                 header("Location:../controlador/Indice.php");
           } else {
-                echo "Error: " . $consulta . "<br>" . mysqli_error($conn);
+            header("Location:../controlador/formRegistro.php");
           }
            
             # Cerrar la conexión es una buena práctica, para liberar recursos
