@@ -13,8 +13,15 @@ include 'conexionBd.php';
             $password1=$_POST["contra"];
             $encriptar=md5($password1);
             $email=$_POST["email"];
-            $consulta = "INSERT INTO Clientes (nombre, apellidos, direccion, fecha_nacimiento, telefono, email, contrasenya,usuario)
-            VALUES ('$nombre','$apellidos','$direccion','$fecha_nacimiento','$telefono','$email','$encriptar','$nomUsuario')";
+      $consultaComprobar="SELECT email FROM Clientes WHERE ='$email'";
+      $result=mysqli_query($conn, $consultaComprobar);
+            if(mysqli_num_rows($result)!=1){
+                  $consulta = "INSERT INTO Clientes (nombre, apellidos, direccion, fecha_nacimiento, telefono, email, contrasenya,usuario)
+                  VALUES ('$nombre','$apellidos','$direccion','$fecha_nacimiento','$telefono','$email','$encriptar','$nomUsuario')";
+            }else{
+                  echo "ERROR";
+            }
+           
           
             # A continuación se ejecuta la consulta y se devuelve el resultado
             # en el caso de que se trate de un SELECT. En otro caso devuelve
